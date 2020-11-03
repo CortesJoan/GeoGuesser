@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appBackgroundColor"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="0.5"
+        android:text="@string/question"
+        tools:text="Question "
+        android:textColor="@color/questionTextColor"
+        android:gravity="center"
+        />
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/progressText"
+            tools:text="Question 1 out of 10"
+            android:gravity="center"
+            android:textSize="20sp"
+android:textStyle="bold"
+            />
+        <Button
+            android:textStyle="bold"
+            android:id="@+id/trueButton"
+            android:layout_width="370sp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_below="@id/progressText"
+
+
+            android:text="@string/trueText"
+            android:background="@color/trueButtonColor"
+
+            />
+
+        <Button
+            android:layout_toRightOf="@id/trueButton"
+            android:id="@+id/falseButton"
+            android:layout_width="370sp"
+            android:layout_height="wrap_content"
+
+            android:textSize="25sp"
+            android:layout_below="@id/progressText"
+
+
+            android:background="@color/falseButtonColor"
+            android:text="@string/falseText"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/trueButton"
+
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

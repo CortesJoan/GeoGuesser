@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appBackgroundColor"
+    tools:context=".MainActivity">
+    <TextView
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="0.5"
+        android:text="@string/question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Question "
+        android:textColor="@color/questionTextColor"
+        android:gravity="center"
+        />
+
+
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="@string/progressText"
+            tools:text="Question 1 out of 10"
+
+            />
+
+        <Button
+            android:id="@+id/trueButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+
+
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/trueButtonColor"
+            android:text="@string/trueText"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/falseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+
+            android:background="@color/falseButtonColor"
+            android:text="@string/falseText"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
