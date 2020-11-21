@@ -45,21 +45,20 @@ android:textStyle="bold"
             />
         <Button
             android:textStyle="bold"
-            android:id="@+id/trueButton"
+            android:id="@+id/option1"
             android:layout_width="370sp"
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:layout_below="@id/progressText"
 
-
-            android:text="@string/trueText"
+            android:text="@string/option1"
             android:background="@color/trueButtonColor"
 
             />
 
         <Button
-            android:layout_toRightOf="@id/trueButton"
-            android:id="@+id/falseButton"
+            android:layout_toRightOf="@id/option1"
+            android:id="@+id/option2"
             android:layout_width="370sp"
             android:layout_height="wrap_content"
 
@@ -68,9 +67,38 @@ android:textStyle="bold"
 
 
             android:background="@color/falseButtonColor"
-            android:text="@string/falseText"
+            android:text="@string/option2"
             android:textStyle="bold"
-            android:layout_toEndOf="@id/trueButton"
+            android:layout_toEndOf="@id/option1"
+
+            />
+        <Button
+            android:textStyle="bold"
+            android:id="@+id/option3"
+            android:layout_width="370sp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_below="@id/option1"
+            android:layout_marginBottom="30dp"
+            android:text="@string/option3"
+            android:background="@color/trueButtonColor"
+
+            />
+
+        <Button
+            android:layout_toRightOf="@id/option1"
+            android:id="@+id/option4"
+            android:layout_width="370sp"
+            android:layout_height="wrap_content"
+
+            android:textSize="25sp"
+            android:layout_below="@id/option2"
+
+
+            android:background="@color/falseButtonColor"
+            android:text="@string/option4"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/option3"
 
             />
 
