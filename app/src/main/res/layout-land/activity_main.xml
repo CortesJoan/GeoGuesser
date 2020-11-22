@@ -4,103 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:orientation="vertical"
-    android:background="@color/appBackgroundColor"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:gravity="end"
+        android:text="@string/score"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:text="@string/scoreText" />
 
     <TextView
-        android:textStyle="bold"
-        android:textSize="34sp"
         android:id="@+id/questionText"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_weight="0.5"
-        android:text="@string/question"
-        tools:text="Question "
-        android:textColor="@color/questionTextColor"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        />
+        android:text="@string/question"
+        android:textColor="@color/questionTextColor"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:text="Question " />
+
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
-        android:orientation="vertical">
+        >
+
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
+
         <TextView
             android:id="@+id/progressText"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="@string/progressText"
-            tools:text="Question 1 out of 10"
             android:gravity="center"
+            android:text="@string/progressText"
+            android:textColor="@color/textColor"
             android:textSize="20sp"
-android:textStyle="bold"
-            />
-        <Button
             android:textStyle="bold"
+            tools:text="Question 1 out of 10" />
+
+        <Button
             android:id="@+id/option1"
-            android:layout_width="370sp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
             android:layout_below="@id/progressText"
-
-            android:text="@string/option1"
             android:background="@color/trueButtonColor"
+            android:text="@string/option1"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
 
             />
 
         <Button
-            android:layout_toRightOf="@id/option1"
             android:id="@+id/option2"
-            android:layout_width="370sp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-
-            android:textSize="25sp"
             android:layout_below="@id/progressText"
 
-
-            android:background="@color/falseButtonColor"
-            android:text="@string/option2"
-            android:textStyle="bold"
             android:layout_toEndOf="@id/option1"
+            android:layout_toRightOf="@id/option1"
+            android:background="@color/falseButtonColor"
+
+
+            android:text="@string/option2"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
 
             />
+
         <Button
-            android:textStyle="bold"
             android:id="@+id/option3"
-            android:layout_width="370sp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
             android:layout_below="@id/option1"
             android:layout_marginBottom="30dp"
-            android:text="@string/option3"
             android:background="@color/trueButtonColor"
+            android:text="@string/option3"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
 
             />
 
         <Button
-            android:layout_toRightOf="@id/option1"
             android:id="@+id/option4"
-            android:layout_width="370sp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-
-            android:textSize="25sp"
             android:layout_below="@id/option2"
 
+            android:layout_toEndOf="@id/option3"
+            android:layout_toRightOf="@id/option1"
 
             android:background="@color/falseButtonColor"
+
             android:text="@string/option4"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_toEndOf="@id/option3"
 
             />
+
+        <Button
+            android:id="@+id/hint"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/option4"
+            android:layout_toEndOf="@id/option3"
+            android:layout_toRightOf="@+id/option3"
+            android:background="@color/hintColor"
+            android:text="@string/hintBurttonText"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>

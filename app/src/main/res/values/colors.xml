@@ -4,8 +4,14 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="appBackgroundColor">#F0F4C3</color>
-    <color name="questionTextColor">#536DFE</color>
-    <color name="progressTextColor">#212121</color>
-    <color name="trueButtonColor">#8BC34A</color>
-    <color name="falseButtonColor">#F44336</color>
+    <color name="questionTextColor">#FFFFFF</color>
+    <color name="progressTextColor">#FFFFFF</color>
+    <color name="trueButtonColor">#9E9E9E
+    </color>
+    <color name="falseButtonColor">#9E9E9E
+
+    </color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="hintColor">#757575</color>
+    <color name="backgroundColor">#3F51B5</color>
 </resources>

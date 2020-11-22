@@ -6,8 +6,22 @@ public class QuestionModel {
     int position;
     int numberOfCorrectAnswers = 0;
     int questionText;
+
+    public ResponseModel[] getRespones() {
+        return respones;
+    }
+
+    public void setRespones(ResponseModel[] respones) {
+        this.respones = respones;
+    }
+
+    public void setAnswerPosition(ArrayList<Integer> answerPosition) {
+        this.answerPosition = answerPosition;
+    }
+
+    ResponseModel[] respones;
     ArrayList<Integer> answerNum;
-    ArrayList<Integer> answerPosition = new ArrayList<>() ;
+    ArrayList<Integer> answerPosition = new ArrayList<>();
 
     public int getNumberOfCorrectAnswers() {
         return numberOfCorrectAnswers;
@@ -24,15 +38,14 @@ public class QuestionModel {
         for (ResponseModel respons : responses) {
 
 
-            //  r.getAnswerText();
             if (respons.isAnswer()) {
                 answerPosition.add(respons.getPosition());
             }
         }
-//        responses[questionText].getPosition();
+        this.respones=responses;
     }
 
-    public   ArrayList<Integer> getAnswerPosition() {
+    public ArrayList<Integer> getAnswerPosition() {
         return answerPosition;
     }
 
@@ -62,15 +75,13 @@ public class QuestionModel {
     }
 
 
-
     ArrayList<Integer> checkTheCorrectAnswer(ResponseModel[] responses2) {
-        int numberOfCurrentCorrectAnswers = 0;
-        ArrayList<Integer> correctAnswersPostions = new ArrayList<Integer>();
-        //  int[] correctAnswersPostions=new int[numberOfCorrectAnswers];
+         ArrayList<Integer> correctAnswersPostions = new ArrayList<>();
+
         for (ResponseModel responseModel : responses2) {
             if (responseModel.isAnswer()) {
                 numberOfCorrectAnswers++;
-                //correctAnswersPostions[i]=responses2[i].getPosition();
+
                 correctAnswersPostions.add(responseModel.getPosition());
 
             }
@@ -78,6 +89,6 @@ public class QuestionModel {
         if (correctAnswersPostions.size() == numberOfCorrectAnswers) {
             return correctAnswersPostions;
         }
-        return new ArrayList<Integer>(0);
+        return new ArrayList<>(0);
     }
 }

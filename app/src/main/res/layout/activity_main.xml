@@ -5,19 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/appBackgroundColor"
-    tools:context=".MainActivity"><RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Title"
-        android:text="GeoGuesser"
-        android:textSize="24sp"
-        android:layout_gravity="left"
-        android:id="@+id/title"
-        />
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -25,22 +14,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
-        android:layout_toEndOf="@id/title"
-
-        android:layout_toRightOf="@id/title"
-android:id="@+id/scoreText"
+         android:textColor="#FFFFFF"
+        android:id="@+id/scoreText"
         android:gravity="end"
-        android:text="Score: 0"
+        android:text="@string/score"
         android:textSize="24sp"
         tools:text="@string/scoreText" />
-</RelativeLayout>
+
     <TextView
 
         android:textStyle="bold"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:id="@+id/questionText"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
          android:text="@string/question"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -51,16 +38,24 @@ android:id="@+id/scoreText"
         android:gravity="center_horizontal"
 
         />
-
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="@string/progressText"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Question 1 out of 10" />
 
 
 
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.7"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+         android:orientation="horizontal">
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
@@ -79,9 +74,10 @@ android:id="@+id/scoreText"
             android:layout_marginTop="0dp"
             android:background="@color/trueButtonColor"
             android:text="@string/option1"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="NestedWeights" />
+            tools:ignore="NestedWeights"
+            android:textColor="#FFFFFF"/>
 
         <Button
             android:layout_below="@+id/progressBar"
@@ -89,22 +85,23 @@ android:id="@+id/scoreText"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/option1"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_toRightOf="@+id/option1"
             android:background="@color/falseButtonColor"
             android:text="@string/option2"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
         <Button
             android:id="@+id/option3"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/option1"
-
+            android:textColor="#FFFFFF"
             android:layout_centerVertical="true"
             android:layout_marginTop="0dp"
             android:background="@color/trueButtonColor"
             android:text="@string/option3"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="NestedWeights" />
 
@@ -114,20 +111,23 @@ android:id="@+id/scoreText"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/option3"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_toRightOf="@+id/option3"
             android:background="@color/falseButtonColor"
             android:text="@string/option4"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            />
         <Button
             android:layout_below="@+id/option4"
             android:id="@+id/hint"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/option3"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_toRightOf="@+id/option3"
-            android:background="@color/falseButtonColor"
+            android:background="@color/hintColor"
+            android:textColor="@color/textColor"
             android:text="@string/hintBurttonText"
             android:textStyle="bold" />
 
